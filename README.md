@@ -1,6 +1,9 @@
 # GetMeReady
 GetMeReady is a placement preparation portal that helps students analyze resumes and identify skill gaps before applying for internships or jobs.
 
+## Live Demo
+https://getmeready.onrender.com
+
 ## Features
 - Resume PDF upload and text extraction
 - Resume score generation
