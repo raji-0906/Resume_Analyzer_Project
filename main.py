@@ -14,6 +14,8 @@ def home():
 @app.route('/analyze', methods=['POST'])
 def analyze():
     file = request.files['resume']
+
+    os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     file.save(filepath)
 
