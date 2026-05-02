@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+</head>
+<body>
+
+    <h2>Resume Score: {{ result.score }}/100</h2>
+
+    <h3>Skills Found</h3>
+    <ul>
+        {% for skill in result.found %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Suggested Skills</h3>
+    <ul>
+        {% for skill in result.missing %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

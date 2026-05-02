@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="card">
+        <h2>Resume Score: {{ result.score }}/100</h2>
+        <a href="/" style="text-decoration:none;"><button>Analyze Another Resume</button></a>
+
+        <div class="columns">
+            <div>
+                <h3>Skills Found</h3>
+                <ul>
+                {% for skill in result.found %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Suggested Skills</h3>
+                <ul>
+                {% for skill in result.missing %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <h3>Improvement Tips</h3>
+        <ul>
+        {% for tip in result.tips %}
+            <li>{{ tip }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
